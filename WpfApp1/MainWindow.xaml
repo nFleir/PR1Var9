@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Пр1" Height="452.868" Width="500" WindowStyle="ThreeDBorderWindow">
+    <Grid Margin="0,0,191,23">
+        <Image Name="FormulaImg" HorizontalAlignment="Left" Height="108" Margin="10,10,-329,0" VerticalAlignment="Top" Width="441" Source="formula.png" IsEnabled="False"/>
+        <TextBlock Name="X" HorizontalAlignment="Left" Height="16" Margin="34,144,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="9" IsEnabled="False"/>
+        <TextBox Name="EnterX" HorizontalAlignment="Left" Height="25" Margin="58,143,-17,0" TextWrapping="Wrap" Text="Введите х" VerticalAlignment="Top" Width="81" TextChanged="TextBox_TextChanged" PreviewMouseDown="EnterX_PreviewMouseDown"/>
+        <TextBlock Name="P" HorizontalAlignment="Left" Height="22" Margin="34,176,0,0" TextWrapping="Wrap" Text="p" VerticalAlignment="Top" Width="9" IsEnabled="False"/>
+        <TextBox Name="EnterP" HorizontalAlignment="Left" Height="22" Margin="58,176,-17,0" TextWrapping="Wrap" Text="Введите p" VerticalAlignment="Top" Width="81" PreviewMouseDown="EnterP_PreviewMouseDown"/>
+        <StackPanel Margin="30,211,-30,117" >
+            <RadioButton Name="PressSH" Content="sh(x)" CommandParameter="sh(x)" Click="PressSH_Click"></RadioButton>
+            <RadioButton Name="xVkvadrate" Content="x^2" CommandParameter="x^2" Click="xVkvadrate_Click" ></RadioButton>
+            <RadioButton Name="eVikse" Content="e^x" CommandParameter="e^x" Click="eVikse_Click"></RadioButton>
+        </StackPanel>
+        <TextBlock Name="AnswerText" HorizontalAlignment="Left" Height="28" Margin="9,280,0,0" TextWrapping="Wrap" Text="Ответ" VerticalAlignment="Top" Width="34" IsEnabled="False"/>
+        <TextBox Name="PrintAnswer" HorizontalAlignment="Left" Height="22" Margin="58,280,-17,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="81" IsEnabled="False"/>
+        <Button Name="calculateAnswer" Content="Вычислить" HorizontalAlignment="Left" Height="23" Margin="157,211,-128,0" VerticalAlignment="Top" Width="93" Click="calculateAnswer_Click"/>
+        <Button Name="ClearAll" Content="Очистить" HorizontalAlignment="Left" Height="23" Margin="157,239,-128,0" VerticalAlignment="Top" Width="93" Click="ClearAll_Click"/>
+    </Grid>
+</Window>
